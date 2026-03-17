@@ -3,7 +3,7 @@ cask "redmine" do
   name "redmine"
   desc "CLI tool for interacting with Redmine project management"
   homepage "https://github.com/aarondpn/redmine-cli"
-  version "1.8.0"
+  version "1.8.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "redmine" do
   on_macos do
     on_intel do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-darwin-amd64.tar.gz"
-      sha256 "5c2814ad6b05655e54e89979527822eecc7c49f43101e67004448122aa28fcd2"
+      sha256 "810d9024202b4641024dedaaa6783ec8bcd9e7fed0ce8549df06a372e8301e1b"
     end
     on_arm do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-darwin-arm64.tar.gz"
-      sha256 "4ddfe567ada2ec39efc7fc3915d939ba81cc4b207d1ed8f5879bb8342b34b988"
+      sha256 "c1e89238e95ed321db569f197f48a16a52ccf9f01c1e689c33ed6050769febe2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-linux-amd64.tar.gz"
-      sha256 "7468025b607b0779cbdaa196bdb02397fa6b63cb59d56e5a3bbaed3d28c0e837"
+      sha256 "f18244d865dd25e74e602d8351a2b6160e55dafb148f06d0fd32d93ff2be356e"
     end
     on_arm do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-linux-arm64.tar.gz"
-      sha256 "ff31d40cb3325e657f3540c07f7ae64462dbba3aac3537d5e2af6238efdf584b"
+      sha256 "787f0d468962fcbdd3dcf4b3362239d65ec586942b0f1e4b8f3569b48b3efd79"
     end
   end
 
