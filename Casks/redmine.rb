@@ -3,7 +3,7 @@ cask "redmine" do
   name "redmine"
   desc "CLI tool for interacting with Redmine project management"
   homepage "https://github.com/aarondpn/redmine-cli"
-  version "1.9.0"
+  version "1.10.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,23 +17,27 @@ cask "redmine" do
   on_macos do
     on_intel do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-darwin-amd64.tar.gz"
-      sha256 "063fa3ccc23dc35a3c769bdd3e640c0ab8cbe745bcbea78f8ab6f25ddedc0089"
+      sha256 "5ebcdc840974cce0b4a1e1a335a8df3318e2072bf127ce006eb3ba87c799bac4"
     end
     on_arm do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-darwin-arm64.tar.gz"
-      sha256 "9a61fab2ef002dcbe07eba23536c027b026efe3b37fe93fa507746050534dca0"
+      sha256 "0bfb1708b364b720f53abe1899ceeea95fa308083b68b86948b8c9df0223d109"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-linux-amd64.tar.gz"
-      sha256 "6437163422768d7ed62752717653e8fdf5cfdf6bf732535ad3c4c4a35cb6e986"
+      sha256 "44b285fa58737cf0012b5471f30318b96453984f571228589ce6a96498ddf6ec"
     end
     on_arm do
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-linux-arm64.tar.gz"
-      sha256 "842bd2a7d5ba3e08441b6862c4626b0180a13cb684e0dada675fcad271278dcc"
+      sha256 "fb2bf6c7c5d001165e6617c56785e265066efe7d0a9f9b91751fe55dde94c4ab"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/redmine"]
   end
 
   # No zap stanza required
