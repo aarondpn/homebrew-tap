@@ -13,7 +13,7 @@ cask "local-whisper" do
   end
 
   auto_updates false
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "LocalWhisper.app"
 
