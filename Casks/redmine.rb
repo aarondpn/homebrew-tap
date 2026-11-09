@@ -4,25 +4,25 @@ cask "redmine" do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/redmine"]
   end
 
-  version "2.19.2"
+  version "2.20.0"
 
   on_macos do
     on_arm do
-      sha256 "e65f498178ae89ac83cae45d56523c054d2f4abd87f0723912f27f64248e1aa5"
+      sha256 "75b270587dac6c8d368803fe3d8ec21ad8962fc4c58a60d571c5148ccc14e7b1"
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-darwin-arm64.tar.gz"
     end
     on_intel do
-      sha256 "cf07ea65c5c00237d9dc35ff1067baf18bea7793b0a0293fd3bc6d9dff380668"
+      sha256 "43a8772cced8f49c48e72fb66ddfa0ba086660f115a5e12406ecadfefb44579d"
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-darwin-amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "dc5a7de1a3f38ed61660562d1c18dd81aa788a6c05dd194d63574fca31a4f618"
+      sha256 "0600cc971de909b525051e5f6f0df45fa214524bd6f275bd35e9b0776e9c78b2"
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-linux-arm64.tar.gz"
     end
     on_intel do
-      sha256 "749ca6122361977e770aeef16f10c1fb708ce3ccd9189326f92f6a05a68437ed"
+      sha256 "96f888db3a00b335aea7a4303f38d735014ddb8797c35ab4f9f15bf884884f1f"
       url "https://github.com/aarondpn/redmine-cli/releases/download/v#{version}/redmine-cli-linux-amd64.tar.gz"
     end
   end
